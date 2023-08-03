@@ -68,7 +68,10 @@
 
 %% Use this space to work on these analyses
 
-
+load('Bootcamp_problem_set_1_data.mat');
+rangeSalaries = range(salaries);
+rangeYrsEducation = range(year_of_ed);
+avgSalary = mean(salaries);
 
 
 
@@ -94,24 +97,40 @@ fourth_salary = salaries(4);
 
 % Is the 10th salary less than 100?
 
+salaries(1, 10)
+
 % Find all of the salaries over 100
+
+find(salaries > 100)
 
 % Check that the above is correct. Are all the salaries over 100?
 
 % Calculate the average salary of people with 0 years of post-secondary education
+
+zeroYrsPostEd = find(year_of_ed == 0);
+zeroYrsPostEdSalaries = salaries(zero_yrs_post_ed);
+meanZeroYrsPostEdSalaries = mean(zeroYrsPostEdSalaries);
+
 % now do the same for 2, 4, or 10 years of education
 
 
+
+
 %% space to work on these analyses
+    yearsOfEducation = 2;
+    yrsPostEd = find(year_of_ed == yearsOfEducation);
+    yrsPostEdSalaries = salaries(yrsPostEd);
+    MeanTwoYrsPostEdSalaries = mean(yrsPostEdSalaries);
 
+    yearsOfEducation = 4;
+    yrsPostEd = find(year_of_ed == yearsOfEducation);
+    yrsPostEdSalaries = salaries(yrsPostEd);
+    MeanFourYrsPostEdSalaries = mean(yrsPostEdSalaries);
 
-
-
-
-
-
-
-
+    yearsOfEducation = 10;
+    yrsPostEd = find(year_of_ed == yearsOfEducation);
+    yrsPostEdSalaries = salaries(yrsPostEd);
+    MeanTenYrsPostEdSalaries = mean(yrsPostEdSalaries);
 
 
 
@@ -125,12 +144,12 @@ fourth_salary = salaries(4);
 
 %try finding the max of a variable that doesn't exist
 
-E1 = max(no_data)
+%E1 = max(no_data)
 
 
 %try finding the 23rd element of the salaries array
 
-E2 = salaries(23)
+%E2 = salaries(23)
 
 % Note that the error message provides useful information about why the
 % code did not work, including (depending on the nature of the error) the
