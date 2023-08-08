@@ -36,7 +36,7 @@ Mean_2 = mean(Sample_matrix,2)
 % You can drag the .mat file into your Workspace
 % You can also use the 'load' function (type 'help load' below to see how
 % to use that function)
-
+load("Bootcamp_problem_set_3_data.mat")
  
 % Data explanation:
 % Columns: Time in seconds
